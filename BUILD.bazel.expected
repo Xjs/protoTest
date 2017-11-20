@@ -9,7 +9,7 @@ proto_library(
 
 go_proto_library(
     name = "a_go_proto",
-    importpath = "github.com/Xjs/protoTest",
+    importpath = "github.com/Xjs/protoTest/a",
     proto = ":a_proto",
     visibility = ["//visibility:public"],
 )
@@ -22,20 +22,20 @@ proto_library(
 
 go_proto_library(
     name = "b_go_proto",
-    importpath = "github.com/Xjs/protoTest",
+    importpath = "github.com/Xjs/protoTest/b",
     proto = ":b_proto",
     visibility = ["//visibility:public"],
 )
 
 go_library(
-    name = "a",
+    name = "a/go_default_library",
     importpath = "github.com/Xjs/protoTest/a",
     library = ":a_go_proto",
     visibility = ["//visibility:public"],
 )
 
 go_library(
-    name = "b",
+    name = "b/go_default_library",
     importpath = "github.com/Xjs/protoTest/b",
     library = ":b_go_proto",
     visibility = ["//visibility:public"],
