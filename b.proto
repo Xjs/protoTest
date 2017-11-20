@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package b;
+option go_package = "github.com/Xjs/protoTest/b";
+
+message BObject {
+	int32 b_variable = 1;
+}
+
