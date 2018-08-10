@@ -39,6 +39,6 @@ go_library(
 
 go_binary(
     name = "main",
-    embed = ":go_default_library",
+    embed = [":go_default_library"],
     visibility = ["//visibility:public"],
 )
