@@ -40,6 +40,9 @@ go_library(
 
 go_binary(
     name = "main",
+    goos = "linux",
+    goarch = "amd64",
+    pure = "on",
     embed = [":go_default_library"],
     visibility = ["//visibility:public"],
 )
